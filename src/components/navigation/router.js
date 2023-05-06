@@ -18,6 +18,10 @@ import {
   RoomsList,
   EditRoom,
   NewRoom,
+  // reservations
+  ReservationsList,
+  EditReservation,
+  NewReservation,
 } from '../../pages';
 
 export const router = createBrowserRouter([
@@ -76,6 +80,19 @@ export const router = createBrowserRouter([
       {
         path: 'rooms/new',
         element: <NewRoom />
+      },
+      // reservations
+      {
+        path: 'reservations',
+        element: <ReservationsList />
+      },
+      {
+        path: 'reservations/:id',
+        element: <EditReservation />
+      },
+      {
+        path: 'reservations/new',
+        element: <NewReservation />
       },
     ]
   },
