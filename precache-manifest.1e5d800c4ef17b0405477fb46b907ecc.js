@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2c448316db476fe5dbeb",
+    "revision": "340190eb287448bc9cf5",
     "url": "/modbd-fe/static/css/main.d39c3c0c.chunk.css"
   },
   {
-    "revision": "2c448316db476fe5dbeb",
-    "url": "/modbd-fe/static/js/main.0304887f.chunk.js"
+    "revision": "340190eb287448bc9cf5",
+    "url": "/modbd-fe/static/js/main.fc097fa0.chunk.js"
   },
   {
     "revision": "4ff117cb759cee7d6d21",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/modbd-fe/static/js/3.94bb64a9.chunk.js"
   },
   {
-    "revision": "8a0896a8d781d46d46dc720deed6c581",
+    "revision": "3a7b8eb954520f20d5ffa68275be21ff",
     "url": "/modbd-fe/index.html"
   }
 ];
