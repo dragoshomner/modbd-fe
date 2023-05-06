@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import { 
   // employees
@@ -40,10 +40,10 @@ import {
   NewCountry
 } from '../../pages';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
-    basename: '/modbd-fe',
+    basename: '/',
     element: <Navigation />,
     children: [
       // employees
