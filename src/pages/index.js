@@ -5,3 +5,4 @@ export * from './rooms';
 export * from './reservations';
 export * from './clients';
 export * from './addresses';
+export * from './cities';
