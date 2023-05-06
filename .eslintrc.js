@@ -1,7 +1,7 @@
 module.exports = {
   'env': {
     'browser': true,
-    'es2021': true,
+    'es6': true,
     'node': true
   },
   'extends': [
@@ -10,9 +10,14 @@ module.exports = {
   ],
   'overrides': [
   ],
+  "parser": "babel-eslint",
   'parserOptions': {
     'ecmaVersion': 'latest',
-    'sourceType': 'module'
+    'sourceType': 'module',
+    'ecmaVersion': 8,
+    'ecmaFeatures': {
+      'jsx': true
+    }
   },
   'plugins': [
     'react'
@@ -21,6 +26,8 @@ module.exports = {
     'quotes': ['error', 'single'],
     'semi': ['error', 'always'],
     'indent': ['error', 2],
-    'no-multi-spaces': ['error']
+    'no-multi-spaces': ['error'],
+    "react/prop-types": "off",
+    "no-console": "off",
   }
 };
