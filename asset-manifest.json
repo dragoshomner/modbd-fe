@@ -1,15 +1,15 @@
 {
   "main.css": "/modbd-fe/static/css/main.d39c3c0c.chunk.css",
-  "main.js": "/modbd-fe/static/js/main.fc097fa0.chunk.js",
-  "main.js.map": "/modbd-fe/static/js/main.fc097fa0.chunk.js.map",
+  "main.js": "/modbd-fe/static/js/main.a232dba6.chunk.js",
+  "main.js.map": "/modbd-fe/static/js/main.a232dba6.chunk.js.map",
   "runtime~main.js": "/modbd-fe/static/js/runtime~main.773ebc55.js",
   "runtime~main.js.map": "/modbd-fe/static/js/runtime~main.773ebc55.js.map",
-  "static/js/2.95dabda9.chunk.js": "/modbd-fe/static/js/2.95dabda9.chunk.js",
-  "static/js/2.95dabda9.chunk.js.map": "/modbd-fe/static/js/2.95dabda9.chunk.js.map",
+  "static/js/2.e635d433.chunk.js": "/modbd-fe/static/js/2.e635d433.chunk.js",
+  "static/js/2.e635d433.chunk.js.map": "/modbd-fe/static/js/2.e635d433.chunk.js.map",
   "static/js/3.94bb64a9.chunk.js": "/modbd-fe/static/js/3.94bb64a9.chunk.js",
   "static/js/3.94bb64a9.chunk.js.map": "/modbd-fe/static/js/3.94bb64a9.chunk.js.map",
   "index.html": "/modbd-fe/index.html",
-  "precache-manifest.1e5d800c4ef17b0405477fb46b907ecc.js": "/modbd-fe/precache-manifest.1e5d800c4ef17b0405477fb46b907ecc.js",
+  "precache-manifest.9af1aa272b4731fc2cffd94c70a993ed.js": "/modbd-fe/precache-manifest.9af1aa272b4731fc2cffd94c70a993ed.js",
   "service-worker.js": "/modbd-fe/service-worker.js",
   "static/css/main.d39c3c0c.chunk.css.map": "/modbd-fe/static/css/main.d39c3c0c.chunk.css.map"
 }
