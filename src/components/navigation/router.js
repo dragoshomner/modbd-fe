@@ -43,6 +43,7 @@ import {
 export const router = createBrowserRouter([
   {
     path: '/',
+    basename: '/modbd-fe',
     element: <Navigation />,
     children: [
       // employees
