@@ -4,3 +4,4 @@ export * from './jobs';
 export * from './rooms';
 export * from './reservations';
 export * from './clients';
+export * from './addresses';

@@ -26,6 +26,10 @@ import {
   ClientsList,
   EditClient,
   NewClient,
+  // addresses,
+  AddressesList,
+  EditAddress,
+  NewAddress,
 } from '../../pages';
 
 export const router = createBrowserRouter([
@@ -110,6 +114,19 @@ export const router = createBrowserRouter([
       {
         path: 'clients/new',
         element: <NewClient />
+      },
+      // addresses
+      {
+        path: 'addresses',
+        element: <AddressesList />
+      },
+      {
+        path: 'addresses/:id',
+        element: <EditAddress />
+      },
+      {
+        path: 'addresses/new',
+        element: <NewAddress />
       },
     ]
   },
