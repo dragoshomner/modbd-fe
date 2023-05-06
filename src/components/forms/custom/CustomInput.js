@@ -1,10 +1,11 @@
 import React, { forwardRef } from 'react';
 import TextField from '@mui/material/TextField';
 
-const CustomInput = forwardRef(({hasError, label, register, otherProps}, ref) => (
+const CustomInput = forwardRef(({hasError, label, type, register, otherProps}, ref) => (
   <TextField 
     label={label}
     ref={ref}
+    type={type ? type : 'text'}
     variant="outlined" 
     fullWidth
     style={{ marginBottom: 10 }}

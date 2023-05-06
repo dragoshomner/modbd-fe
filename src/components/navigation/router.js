@@ -1,7 +1,14 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import { Navigation } from './Navigation';
-import { EmployeesList, HotelsList, EditHotel, NewHotel } from '../../pages';
+import { 
+  EmployeesList, 
+  EditEmployee,
+  NewEmployee,
+  HotelsList, 
+  EditHotel, 
+  NewHotel 
+} from '../../pages';
 
 export const router = createBrowserRouter([
   {
@@ -11,6 +18,14 @@ export const router = createBrowserRouter([
       {
         path: 'employees',
         element: <EmployeesList />
+      },
+      {
+        path: 'employees/:id',
+        element: <EditEmployee />
+      },
+      {
+        path: 'employees/new',
+        element: <NewEmployee />
       },
       {
         path: 'hotels',
@@ -23,7 +38,7 @@ export const router = createBrowserRouter([
       {
         path: 'hotels/new',
         element: <NewHotel />
-      }
+      },
     ]
   },
 ]);

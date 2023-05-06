@@ -27,7 +27,6 @@ const HotelForm = ({data, onSubmit}) => {
         register={register('description', {required: true})} />
       <CustomInput 
         id="rating" 
-        type="number"
         label="Rating" 
         hasError={Boolean(errors.rating)}
         register={register('rating', {required: true})} />
