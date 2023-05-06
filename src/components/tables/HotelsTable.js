@@ -38,7 +38,7 @@ export const HotelsTable = ({ rows }) => {
               <TableCell>{row.address_id}</TableCell>
               <TableCell>
                 <Button variant="contained" component={Link} to={`/hotels/${row.id}`}>
-                Edit
+                  Edit
                 </Button>
               </TableCell>
             </TableRow>
