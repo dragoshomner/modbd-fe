@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import CustomInput from './CustomInput';
+import CustomInput from './custom/CustomInput';
 
 const HotelForm = ({data, onSubmit}) => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm({
