@@ -12,7 +12,7 @@ export const ListHeader = ({ createLinkEntity }) => {
         <Grid item xs={6}>
           <Button 
             variant="contained" 
-            component={Link} 
+            component={Link}
             to={`/${createLinkEntity}/new`} 
             style={{marginBottom: 10}}>
                 Create

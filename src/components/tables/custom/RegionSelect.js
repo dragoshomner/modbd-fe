@@ -1,21 +1,22 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { RegionContext } from '../../../data/context/RegionProvider';
 
 export const RegionSelect = () => {
-  const [age, setAge] = React.useState('global');
+  const { region, changeRegion } = useContext(RegionContext);
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    changeRegion(event.target.value);
   };
 
   return (
     <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
       <InputLabel>Region</InputLabel>
       <Select
-        value={age}
+        value={region}
         label="Region"
         onChange={handleChange}
       >
