@@ -13,7 +13,11 @@ import {
   // jobs
   JobsList,
   EditJob,
-  NewJob
+  NewJob,
+  // rooms
+  RoomsList,
+  EditRoom,
+  NewRoom,
 } from '../../pages';
 
 export const router = createBrowserRouter([
@@ -59,6 +63,19 @@ export const router = createBrowserRouter([
       {
         path: 'jobs/new',
         element: <NewJob />
+      },
+      // rooms
+      {
+        path: 'rooms',
+        element: <RoomsList />
+      },
+      {
+        path: 'rooms/:id',
+        element: <EditRoom />
+      },
+      {
+        path: 'rooms/new',
+        element: <NewRoom />
       },
     ]
   },
