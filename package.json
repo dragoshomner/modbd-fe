@@ -1,5 +1,6 @@
 {
   "name": "modbd-fe",
+  "homepage": "https://dragoshomner.github.io/modbd-fe/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
