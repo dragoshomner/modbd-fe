@@ -1,9 +1,11 @@
 export const HOTELS_TAB = 'hotels';
 export const EMPLOYEES_TAB = 'employees';
+export const JOBS_TAB = 'jobs';
 
 const TABS_MAPPING = {
   [HOTELS_TAB]: 0,
-  [EMPLOYEES_TAB]: 1
+  [EMPLOYEES_TAB]: 1,
+  [JOBS_TAB]: 2,
 };
 
 export const currentTab = () => {

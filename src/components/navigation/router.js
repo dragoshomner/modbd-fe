@@ -2,12 +2,18 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import { 
+  // employees
   EmployeesList, 
   EditEmployee,
   NewEmployee,
+  // hotels
   HotelsList, 
   EditHotel, 
-  NewHotel 
+  NewHotel,
+  // jobs
+  JobsList,
+  EditJob,
+  NewJob
 } from '../../pages';
 
 export const router = createBrowserRouter([
@@ -15,6 +21,7 @@ export const router = createBrowserRouter([
     path: '/',
     element: <Navigation />,
     children: [
+      // employees
       {
         path: 'employees',
         element: <EmployeesList />
@@ -27,6 +34,7 @@ export const router = createBrowserRouter([
         path: 'employees/new',
         element: <NewEmployee />
       },
+      // hotels
       {
         path: 'hotels',
         element: <HotelsList />
@@ -38,6 +46,19 @@ export const router = createBrowserRouter([
       {
         path: 'hotels/new',
         element: <NewHotel />
+      },
+      // jobs
+      {
+        path: 'jobs',
+        element: <JobsList />
+      },
+      {
+        path: 'jobs/:id',
+        element: <EditJob />
+      },
+      {
+        path: 'jobs/new',
+        element: <NewJob />
       },
     ]
   },

@@ -3,7 +3,12 @@ import { Link, Outlet } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import { EMPLOYEES_TAB, HOTELS_TAB, currentTab } from './tabs';
+import { 
+  EMPLOYEES_TAB, 
+  HOTELS_TAB, 
+  JOBS_TAB, 
+  currentTab 
+} from './tabs';
   
 export function Navigation() {
   const [value, setValue] = React.useState(currentTab);
@@ -18,6 +23,7 @@ export function Navigation() {
         <Tabs value={value} onChange={handleChange}>
           <LinkTab label="Hotels" to={`/${HOTELS_TAB}`} />
           <LinkTab label="Employees" to={`/${EMPLOYEES_TAB}`} />
+          <LinkTab label="Jobs" to={`/${JOBS_TAB}`} />
         </Tabs>
       </Box>
       <Outlet />
