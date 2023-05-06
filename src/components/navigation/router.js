@@ -34,6 +34,10 @@ import {
   CitiesList,
   EditCity,
   NewCity,
+  // countries
+  CountriesList,
+  EditCountry,
+  NewCountry
 } from '../../pages';
 
 export const router = createBrowserRouter([
@@ -144,6 +148,19 @@ export const router = createBrowserRouter([
       {
         path: 'cities/new',
         element: <NewCity />
+      },
+      // countries
+      {
+        path: 'countries',
+        element: <CountriesList />
+      },
+      {
+        path: 'countries/:id',
+        element: <EditCountry />
+      },
+      {
+        path: 'countries/new',
+        element: <NewCountry />
       },
     ]
   },

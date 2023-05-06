@@ -16,7 +16,7 @@ const ClientForm = ({data, onSubmit}) => {
   } = useForm({
     defaultValues: {
       premium_guest: false,
-      ... data
+      ...data
     }
   });
 

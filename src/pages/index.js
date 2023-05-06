@@ -6,3 +6,4 @@ export * from './reservations';
 export * from './clients';
 export * from './addresses';
 export * from './cities';
+export * from './countries';

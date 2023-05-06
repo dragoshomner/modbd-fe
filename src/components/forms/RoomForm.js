@@ -16,7 +16,7 @@ const RoomForm = ({data, onSubmit}) => {
   } = useForm({
     defaultValues: {
       smoking: false,
-      ... data
+      ...data
     }
   });
 
