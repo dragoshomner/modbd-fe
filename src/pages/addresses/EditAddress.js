@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import AddressForm from '../../components/forms/AddressForm';
 import { rows } from '../../__mocks__/addresses.mock';
-import { fetchAddresesById, updateAddreses } from '../../data/requests/addresses';
+import { fetchAddressById, updateAddress } from '../../data/requests/addresses';
 import { RegionContext } from '../../data/context/RegionProvider';
 import { isSuccessful } from '../../data/requests/response';
 import Alert from '@mui/material/Alert';
@@ -15,7 +15,7 @@ export const EditAddress = () => {
   const { region } = useContext(RegionContext);
 
   useEffect(() => {
-    const roomResponse = fetchAddresesById(region, params.id);
+    const roomResponse = fetchAddressById(region, params.id);
     const myDataRaw = isSuccessful(roomResponse) ? 
       roomResponse.data : 
       rows.find(row => row.id === Number(params.id));
@@ -26,7 +26,7 @@ export const EditAddress = () => {
     
   const onSubmit = async (data) => {
     console.log('Edit data', data);
-    const response = await updateAddreses(region, params.id, data);
+    const response = await updateAddress(region, params.id, data);
     if (isSuccessful(response)) {
       setAlert({ severity: 'success', message: response.message });
     }
