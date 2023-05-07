@@ -4,7 +4,7 @@ import { rows as mockedRows } from '../../__mocks__/rooms.mock';
 import { ListHeader } from '../../components/tables/custom/ListHeader';
 import { RegionContext } from '../../data/context/RegionProvider';
 import { fetchAllRooms } from '../../data/requests/rooms';
-import { STATUS_SUCCESS } from '../../data/requests/response';
+import { isSuccessful } from '../../data/requests/response';
 
 export const RoomsList = () => {
   const [rows, setRows] = React.useState([]);
@@ -13,7 +13,7 @@ export const RoomsList = () => {
   useEffect(() => {
     const response = fetchAllRooms(region);
     // TODO: mockedRows must me replaced with []
-    const rows = response.status === STATUS_SUCCESS ? response.data : mockedRows;
+    const rows = isSuccessful(response) ? response.data : mockedRows;
     setRows(rows);
   }, [region]);
 

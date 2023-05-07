@@ -10,3 +10,5 @@ export const errorResponse = (message) => ({
   status: STATUS_ERROR,
   message: message
 });
+
+export const isSuccessful = (response) => response.status === STATUS_SUCCESS;
