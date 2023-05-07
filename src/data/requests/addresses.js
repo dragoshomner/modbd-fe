@@ -14,7 +14,7 @@ export const fetchAllAddresess = async (region) => {
   }
 };
 
-export const fetchAddresesById = async (region, id) => {
+export const fetchAddressById = async (region, id) => {
   try {
     const response = await fetch(`${MAIN_API_URL}/api/addresess/${region}/${id}`);
     if (response.ok) {
@@ -27,7 +27,7 @@ export const fetchAddresesById = async (region, id) => {
   }
 };
 
-export const createAddreses = async (region, data) => {
+export const createAddress = async (region, data) => {
   try {
     const response = await fetch(`${MAIN_API_URL}/api/addresess/${region}`, {
       method: 'POST',
@@ -44,7 +44,7 @@ export const createAddreses = async (region, data) => {
   }
 };
 
-export const updateAddreses = async (region, id, data) => {
+export const updateAddress = async (region, id, data) => {
   try {
     const response = await fetch(`${MAIN_API_URL}/api/addresess/${region}/${id}`, {
       method: 'PUT',
