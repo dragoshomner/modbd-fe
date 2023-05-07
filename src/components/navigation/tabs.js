@@ -21,7 +21,12 @@ const TABS_MAPPING = {
 };
 
 export const currentTab = () => {
-  const path = window.location.pathname;
-  const pathCode = path.split('/')[1] || HOTELS_TAB;
-  return TABS_MAPPING[pathCode] || 0;
+  const pathname = window.location.href + '/';
+
+  for (const tabKey in TABS_MAPPING) {
+    if (pathname.indexOf(`/${tabKey}/`) !== -1) {
+      return TABS_MAPPING[tabKey];
+    }
+  }
+  return 0;
 };
