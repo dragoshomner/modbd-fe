@@ -11,13 +11,22 @@ import { jobRouter } from './routes/job.js';
 import { employeeRouter } from './routes/employee.js';
 import { roomRouter } from './routes/room.js';
 import { rezervationRouter } from './routes/rezervation.js';
-const today = new Date();
-console.log(today.toISOString());
+import cors from 'cors'
+import { clientRouter } from './routes/client.js';
+// const today = new Date();
+// console.log(today.toISOString());
 
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
+
+// app.use(function(req, res, next) {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   next();
+// });
+
 
 // SequelizeService.getEUInstance().sync()
 //   .then(() => {
@@ -43,6 +52,7 @@ app.use('/api/jobs', jobRouter);
 app.use('/api/employees', employeeRouter);
 app.use('/api/rooms', roomRouter);
 app.use('/api/rezervations', rezervationRouter);
+app.use('/api/clients', clientRouter);
 
 app.use(handleError);
 

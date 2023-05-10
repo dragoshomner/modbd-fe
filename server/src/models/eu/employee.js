@@ -49,7 +49,7 @@ EmployeeEU.init(
     birthDate: {
       type: DataTypes.DATE,
       allowNull: true,
-      field: "BIRTDATE",
+      field: "BIRTHDATE",
     },
     nationality: {
       type: DataTypes.STRING(100),

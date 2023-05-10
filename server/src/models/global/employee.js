@@ -1,7 +1,7 @@
 import { DataTypes, Model } from "sequelize";
 import { SequelizeService } from "../../config/db.js";
 
-export class EmployeeAM extends Model {
+export class EmployeeGlobal extends Model {
     employeeId;
     hotelId;
     jobId;
@@ -12,7 +12,7 @@ export class EmployeeAM extends Model {
     nationality
 }
 
-EmployeeAM.init(
+EmployeeGlobal.init(
   {
     employeeId: {
       type: DataTypes.NUMBER,
@@ -58,10 +58,10 @@ EmployeeAM.init(
     }
   },
   {
-    sequelize: SequelizeService.getAMInstance(),
-    modelName: "EmployeeAM",
-    tableName: "EMPLOYEES_AM",
-    schema: 'MODBD_REGIONAL_USER',
+    sequelize: SequelizeService.getGlobalInstance(),
+    modelName: "EmployeeGlobal",
+    tableName: "EMPLOYEES_GLOBAL",
+    schema: 'MODBD_GLOBAL_USER',
     createdAt: false,
     updatedAt: false
   }
