@@ -21,27 +21,27 @@ const AddressForm = ({data, onSubmit}) => {
         hasError={Boolean(errors.street)}
         register={register('street', {required: true})} />
       <CustomInput 
-        id="number" 
+        id="addressNumber" 
         label="Number"  
         type="number"
-        hasError={Boolean(errors.number)}
-        register={register('number', {required: true})} />
+        hasError={Boolean(errors.addressNumber)}
+        register={register('addressNumber', {required: true})} />
       <CustomInput 
-        id="postal_code" 
+        id="postalCode" 
         label="Postal Code"
-        hasError={Boolean(errors.postal_code)}
-        register={register('postal_code', {required: true})} />
+        hasError={Boolean(errors.postalCode)}
+        register={register('postalCode', {required: true})} />
       <CustomInput 
         id="notes" 
         label="Notes"
         hasError={Boolean(errors.notes)}
         register={register('notes', {required: true})} />
       <CustomInput 
-        id="city_id" 
+        id="cityId" 
         label="City Id"
         type="number"
-        hasError={Boolean(errors.city_id)}
-        register={register('city_id', {required: true})} />
+        hasError={Boolean(errors.cityId)}
+        register={register('cityId', {required: true})} />
       <Button type="submit" variant="contained" color="primary">
         Submit
       </Button>

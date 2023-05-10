@@ -33,17 +33,17 @@ export const EmployeesTable = ({ rows }) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.id}
+                {row.employeeId}
               </TableCell>
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.address}</TableCell>
-              <TableCell>{row.start_date}</TableCell>
-              <TableCell>{row.birth_date}</TableCell>
+              <TableCell>{row.startDate}</TableCell>
+              <TableCell>{row.birthDate}</TableCell>
               <TableCell>{row.nationality}</TableCell>
-              <TableCell>{row.hotel_id}</TableCell>
-              <TableCell>{row.job_id}</TableCell>
+              <TableCell>{row.hotelId}</TableCell>
+              <TableCell>{row.jobId}</TableCell>
               <TableCell>
-                <Button variant="contained" component={Link} to={`/employees/${row.id}`}>
+                <Button variant="contained" component={Link} to={`/employees/${row.employeeId}`}>
                   Edit
                 </Button>
               </TableCell>

@@ -30,14 +30,14 @@ export const HotelsTable = ({ rows }) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.id}
+                {row.hotelId}
               </TableCell>
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.description}</TableCell>
               <TableCell>{row.rating}</TableCell>
-              <TableCell>{row.address_id}</TableCell>
+              <TableCell>{row.addressId}</TableCell>
               <TableCell>
-                <Button variant="contained" component={Link} to={`/hotels/${row.id}`}>
+                <Button variant="contained" component={Link} to={`/hotels/${row.hotelId}`}>
                   Edit
                 </Button>
               </TableCell>

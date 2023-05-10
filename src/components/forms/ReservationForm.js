@@ -16,29 +16,29 @@ const ReservationForm = ({data, onSubmit}) => {
   return (
     <Box component="form" onSubmit={handleSubmit(onSubmit)}>
       <CustomInput 
-        id="check_in_date" 
+        id="checkInDate" 
         label="Check-In Date"
         type="date"
-        hasError={Boolean(errors.check_in_date)}
-        register={register('check_in_date', {required: true})} />
+        hasError={Boolean(errors.checkInDate)}
+        register={register('checkInDate', {required: true})} />
       <CustomInput 
-        id="check_out_date" 
+        id="checkOutDate" 
         label="Check-Out Date" 
         type="date"
-        hasError={Boolean(errors.check_out_date)}
-        register={register('check_out_date', {required: true})} />
+        hasError={Boolean(errors.checkOutDate)}
+        register={register('checkOutDate', {required: true})} />
       <CustomInput 
-        id="room_id" 
+        id="roomId" 
         label="Room Id" 
         type="number"
-        hasError={Boolean(errors.room_id)}
-        register={register('room_id', {required: true})} />
+        hasError={Boolean(errors.roomId)}
+        register={register('roomId', {required: true})} />
       <CustomInput 
-        id="client_id" 
+        id="clientId" 
         label="Client Id" 
         type="number"
-        hasError={Boolean(errors.client_id)}
-        register={register('client_id', {required: true})} />
+        hasError={Boolean(errors.clientId)}
+        register={register('clientId', {required: true})} />
       <Button type="submit" variant="contained" color="primary">
         Submit
       </Button>

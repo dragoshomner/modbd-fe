@@ -29,13 +29,13 @@ export const JobsTable = ({ rows }) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.id}
+                {row.jobId}
               </TableCell>
               <TableCell>{row.name}</TableCell>
-              <TableCell>{row.department_name}</TableCell>
+              <TableCell>{row.departmentName}</TableCell>
               <TableCell>{row.salary}</TableCell>
               <TableCell>
-                <Button variant="contained" component={Link} to={`/jobs/${row.id}`}>
+                <Button variant="contained" component={Link} to={`/jobs/${row.jobId}`}>
                   Edit
                 </Button>
               </TableCell>

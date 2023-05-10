@@ -6,9 +6,9 @@ export const successResponse = (data) => ({
   data: data
 });
 
-export const errorResponse = (message) => ({
+export const errorResponse = (data) => ({
   status: STATUS_ERROR,
-  message: message
+  data
 });
 
 export const isSuccessful = (response) => response.status === STATUS_SUCCESS;

@@ -11,10 +11,11 @@ export const AddressesList = () => {
   const { region } = useContext(RegionContext);
 
   useEffect(() => {
-    const response = fetchAllAddresess(region);
+    fetchAllAddresess(region).then((response) => {
     // TODO: mockedRows must me replaced with []
-    const rows = isSuccessful(response) ? response.data : mockedRows;
-    setRows(rows);
+      const rows = isSuccessful(response) ? response.data : mockedRows;
+      setRows(rows);
+    });
   }, [region]);
 
   return (

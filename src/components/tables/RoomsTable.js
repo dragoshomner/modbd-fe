@@ -34,7 +34,7 @@ export const RoomsTable = ({ rows }) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.id}
+                {row.roomId}
               </TableCell>
               <TableCell>{row.number}</TableCell>
               <TableCell>{row.floor}</TableCell>
@@ -42,9 +42,9 @@ export const RoomsTable = ({ rows }) => {
               <TableCell>{row.type}</TableCell>
               <TableCell>{row.price}</TableCell>
               <TableCell><Checkbox disabled checked={row.smoking} /></TableCell>
-              <TableCell>{row.hotel_id}</TableCell>
+              <TableCell>{row.hotelId}</TableCell>
               <TableCell>
-                <Button variant="contained" component={Link} to={`/rooms/${row.id}`}>
+                <Button variant="contained" component={Link} to={`/rooms/${row.roomId}`}>
                   Edit
                 </Button>
               </TableCell>

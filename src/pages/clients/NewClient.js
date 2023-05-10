@@ -14,10 +14,10 @@ export const NewClient = () => {
     console.log('New data', data);
     const response = await createClient(region, data);
     if (isSuccessful(response)) {
-      setAlert({ severity: 'success', message: response.message });
+      setAlert({ severity: 'success', message: response.data.message });
     }
     else {
-      setAlert({ severity: 'error', message: response.message });
+      setAlert({ severity: 'error', message: response.data.message });
     }
   };
     

@@ -21,8 +21,8 @@ export const RegionSelect = () => {
         onChange={handleChange}
       >
         <MenuItem value="global">Global</MenuItem>
-        <MenuItem value="us">US</MenuItem>
-        <MenuItem value="ue">UE</MenuItem>
+        <MenuItem value="am">AM</MenuItem>
+        <MenuItem value="eu">EU</MenuItem>
       </Select>
     </FormControl>
   );

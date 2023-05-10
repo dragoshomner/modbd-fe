@@ -31,11 +31,11 @@ const HotelForm = ({data, onSubmit}) => {
         hasError={Boolean(errors.rating)}
         register={register('rating', {required: true})} />
       <CustomInput 
-        id="address_id" 
+        id="addressId" 
         label="Address Id" 
         type="number"
-        hasError={Boolean(errors.address_id)}
-        register={register('address_id', {required: true})} />
+        hasError={Boolean(errors.addressId)}
+        register={register('addressId', {required: true})} />
       <Button type="submit" variant="contained" color="primary">
         Submit
       </Button>
