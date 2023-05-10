@@ -16,7 +16,7 @@ export const fetchAllCountries = async (region) => {
 
 export const fetchCountryById = async (region, id) => {
   try {
-    const response = await fetch(`${MAIN_API_URL}/api/countrys/${region}/${id}`);
+    const response = await fetch(`${MAIN_API_URL}/api/countries/${region}/${id}`);
     if (response.ok) {
       const data = await response.json();
       return successResponse(data);
@@ -27,35 +27,35 @@ export const fetchCountryById = async (region, id) => {
   }
 };
 
-export const createCountry = async (region, data) => {
+export const createCountry = async (region, body) => {
   try {
-    const response = await fetch(`${MAIN_API_URL}/api/countrys/${region}`, {
+    const response = await fetch(`${MAIN_API_URL}/api/countries/${region}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     });
+    const data = await response.json();
     if (response.ok) {
-      const data = await response.json();
       return successResponse(data);
     }
-    return errorResponse(response.message);
+    return errorResponse(data);
   } catch (error) {
     return errorResponse(error.message);
   }
 };
 
-export const updateCountry = async (region, id, data) => {
+export const updateCountry = async (region, id, body) => {
   try {
-    const response = await fetch(`${MAIN_API_URL}/api/countrys/${region}/${id}`, {
+    const response = await fetch(`${MAIN_API_URL}/api/countries/${region}/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     });
+    const data = await response.json();
     if (response.ok) {
-      const data = await response.json();
       return successResponse(data);
     }
-    return errorResponse(response.message);
+    return errorResponse(data);
   } catch (error) {
     return errorResponse(error.message);
   }

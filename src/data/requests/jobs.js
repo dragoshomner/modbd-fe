@@ -27,35 +27,35 @@ export const fetchJobById = async (region, id) => {
   }
 };
 
-export const createJob = async (region, data) => {
+export const createJob = async (region, body) => {
   try {
     const response = await fetch(`${MAIN_API_URL}/api/jobs/${region}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     });
+    const data = await response.json();
     if (response.ok) {
-      const data = await response.json();
       return successResponse(data);
     }
-    return errorResponse(response.message);
+    return errorResponse(data);
   } catch (error) {
     return errorResponse(error.message);
   }
 };
 
-export const updateJob = async (region, id, data) => {
+export const updateJob = async (region, id, body) => {
   try {
     const response = await fetch(`${MAIN_API_URL}/api/jobs/${region}/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     });
+    const data = await response.json();
     if (response.ok) {
-      const data = await response.json();
       return successResponse(data);
     }
-    return errorResponse(response.message);
+    return errorResponse(data);
   } catch (error) {
     return errorResponse(error.message);
   }

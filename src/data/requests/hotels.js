@@ -27,35 +27,35 @@ export const fetchHotelById = async (region, id) => {
   }
 };
 
-export const createHotel = async (region, data) => {
+export const createHotel = async (region, body) => {
   try {
     const response = await fetch(`${MAIN_API_URL}/api/hotels/${region}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     });
+    const data = await response.json();
     if (response.ok) {
-      const data = await response.json();
       return successResponse(data);
     }
-    return errorResponse(response.message);
+    return errorResponse(data);
   } catch (error) {
     return errorResponse(error.message);
   }
 };
 
-export const updateHotel = async (region, id, data) => {
+export const updateHotel = async (region, id, body) => {
   try {
     const response = await fetch(`${MAIN_API_URL}/api/hotels/${region}/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     });
+    const data = await response.json();
     if (response.ok) {
-      const data = await response.json();
       return successResponse(data);
     }
-    return errorResponse(response.message);
+    return errorResponse(data);
   } catch (error) {
     return errorResponse(error.message);
   }
