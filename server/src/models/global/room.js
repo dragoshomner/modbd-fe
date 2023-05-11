@@ -17,7 +17,6 @@ RoomGlobal.init(
     roomId: {
       type: DataTypes.NUMBER,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: true,
       field: "ROOM_ID",
     },

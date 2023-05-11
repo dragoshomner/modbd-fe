@@ -1,14 +1,16 @@
 import { Router } from "express";
-import { RezervationEU } from '../models/eu/rezervation.js'
-import { RezervationAM } from "../models/am/rezervation.js";
-import { RezervationGlobal } from "../models/global/rezervation.js";
+import { ReservationEU } from '../models/eu/reservation.js'
+import { ReservationAM } from "../models/am/reservation.js";
+import { ReservationGlobal } from "../models/global/reservation.js";
+
+const today = new Date();
 
 const router = Router();
 
 const regions = {
-  eu: RezervationEU,
-  am: RezervationAM,
-  global: RezervationGlobal
+  eu: ReservationEU,
+  am: ReservationAM,
+  global: ReservationGlobal
 }
 
 router.get('/:region', async (req, res) => {
@@ -29,7 +31,7 @@ router.get('/:region/:id', async (req, res) => {
   const { region } = req.params;
   if (Object.keys(regions).includes(region)) {
     regions[region].findAll({
-      where: { rezervationId: req.params.id },
+      where: { reservationId: req.params.id },
       raw: true
     })
       .then(record => {
@@ -41,8 +43,9 @@ router.get('/:region/:id', async (req, res) => {
 
 router.post('/:region', async (req, res, next) => {
   const { region } = req.params;
+  req.body.createdAt = today.toISOString();
   if (Object.keys(regions).includes(region)) {
-    regions[region].create(req.body)
+    regions[region].create(req.body, { returning: false })
       .then((item) => {
         res.status(201)
         res.send({ message: "Resource created successfully"});
@@ -56,7 +59,7 @@ router.put('/:region/:id', async (req, res, next) => {
   if (Object.keys(regions).includes(region)) {
     regions[region].update(
       req.body,
-      { where: { rezervationId: id } }
+      { where: { reservationId: id } }
     ).then((result) => {
       if (result[0]) res.json({ message: 'Record modified' });
       else res.status(404).json({ message: 'Record not found' });
@@ -65,4 +68,4 @@ router.put('/:region/:id', async (req, res, next) => {
   }
 });
 
-export { router as rezervationRouter };
+export { router as reservationRouter };

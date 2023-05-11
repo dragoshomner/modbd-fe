@@ -39,8 +39,9 @@ router.get('/:region/:id', async (req, res) => {
 
 router.post('/:region', async (req, res, next) => {
   const { region } = req.params;
+  req.body.premiumGuest = req.body.premiumGuest ? 1 : 0;
   if (Object.keys(regions).includes(region)) {
-    regions['global'].create(req.body)
+    regions['global'].create(req.body, { returning: false })
       .then((item) => {
         res.status(201)
         res.send({ message: "Resource created successfully"});
@@ -51,6 +52,7 @@ router.post('/:region', async (req, res, next) => {
 
 router.put('/:region/:id', async (req, res, next) => {
   const { region, id } = req.params;
+  req.body.premiumGuest = req.body.premiumGuest ? 1 : 0;
   if (Object.keys(regions).includes(region)) {
     regions['global'].update(
       req.body,

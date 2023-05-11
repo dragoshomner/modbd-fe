@@ -31,7 +31,7 @@ export const ReservationsTable = ({ rows }) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.rezervationId}
+                {row.reservationId}
               </TableCell>
               <TableCell>{row.checkInDate}</TableCell>
               <TableCell>{row.checkOutDate}</TableCell>
@@ -39,7 +39,7 @@ export const ReservationsTable = ({ rows }) => {
               <TableCell>{row.roomId}</TableCell>
               <TableCell>{row.clientId}</TableCell>
               <TableCell>
-                <Button variant="contained" component={Link} to={`/reservations/${row.rezervationId}`}>
+                <Button variant="contained" component={Link} to={`/reservations/${row.reservationId}`}>
                   Edit
                 </Button>
               </TableCell>

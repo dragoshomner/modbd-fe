@@ -14,7 +14,6 @@ HotelGlobal.init(
     hotelId: {
       type: DataTypes.NUMBER,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: true,
       field: "HOTEL_ID",
     },

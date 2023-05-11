@@ -1,14 +1,14 @@
 import { Router } from "express";
 import { RoomEU } from '../models/eu/room.js'
 import { RoomAM } from "../models/am/room.js";
-import { RezervationGlobal } from "../models/global/rezervation.js";
+import { RoomGlobal } from "../models/global/room.js";
 
 const router = Router();
 
 const regions = {
   eu: RoomEU,
   am: RoomAM,
-  global: RezervationGlobal
+  global: RoomGlobal
 }
 
 router.get('/:region', async (req, res) => {
@@ -41,8 +41,9 @@ router.get('/:region/:id', async (req, res) => {
 
 router.post('/:region', async (req, res, next) => {
   const { region } = req.params;
+  req.body.smoking = req.body.smoking ? 1 : 0;
   if (Object.keys(regions).includes(region)) {
-    regions[region].create(req.body)
+    regions[region].create(req.body, { returning: false })
       .then((item) => {
         res.status(201)
         res.send({ message: "Resource created successfully"});
@@ -53,6 +54,7 @@ router.post('/:region', async (req, res, next) => {
 
 router.put('/:region/:id', async (req, res, next) => {
   const { region, id } = req.params;
+  req.body.smoking = req.body.smoking ? 1 : 0;
   if (Object.keys(regions).includes(region)) {
     regions[region].update(
       req.body,

@@ -12,7 +12,6 @@ CountryGlobal.init(
     countryId: {
       type: DataTypes.NUMBER,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: true,
       field: "COUNTRY_ID",
     },

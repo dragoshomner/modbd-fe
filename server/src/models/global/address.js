@@ -15,7 +15,6 @@ AddressGlobal.init(
     addressId: {
       type: DataTypes.NUMBER,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: true,
       field: "ADDRESS_ID",
     },

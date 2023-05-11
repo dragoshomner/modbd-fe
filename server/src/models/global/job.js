@@ -13,7 +13,6 @@ JobGlobal.init(
     jobId: {
       type: DataTypes.NUMBER,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: true,
       field: "JOB_ID",
     },

@@ -10,7 +10,7 @@ import { hotelRouter } from './routes/hotel.js';
 import { jobRouter } from './routes/job.js';
 import { employeeRouter } from './routes/employee.js';
 import { roomRouter } from './routes/room.js';
-import { rezervationRouter } from './routes/rezervation.js';
+import { reservationRouter } from './routes/reservation.js';
 import cors from 'cors'
 import { clientRouter } from './routes/client.js';
 // const today = new Date();
@@ -51,13 +51,13 @@ app.use('/api/hotels', hotelRouter);
 app.use('/api/jobs', jobRouter);
 app.use('/api/employees', employeeRouter);
 app.use('/api/rooms', roomRouter);
-app.use('/api/rezervations', rezervationRouter);
+app.use('/api/reservations', reservationRouter);
 app.use('/api/clients', clientRouter);
 
 app.use(handleError);
 
 const connectionParams = {
-  user: 'modbd_regional_user',
+  user: 'modbd_global_user',
   password: 'modbdpw',
   connectString: 'localhost/modbd_global'
 };
@@ -69,7 +69,7 @@ const connectionParams = {
 //   }
 //   console.log('Connected to Oracle database!');
 //   connection.execute(
-//     "SELECT * FROM COUNTRIES_EU",
+//     "insert into COUNTRIES_GLOBAL (NAME, CONTINENT_ID) values ('Test5', 1)",
 //     (err, result) => {
 //       if (err) {
 //         console.error(err.message);

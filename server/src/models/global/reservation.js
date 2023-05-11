@@ -1,8 +1,8 @@
 import { DataTypes, Model } from "sequelize";
 import { SequelizeService } from "../../config/db.js";
 
-export class RezervationGlobal extends Model {
-    rezervationId;
+export class ReservationGlobal extends Model {
+    reservationId;
     roomId;
     clientId;
     createdAt;
@@ -10,14 +10,13 @@ export class RezervationGlobal extends Model {
     checkOutDate;
 }
 
-RezervationGlobal.init(
+ReservationGlobal.init(
   {
-    rezervationId: {
+    reservationId: {
       type: DataTypes.NUMBER,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: true,
-      field: "REZERVATION_ID",
+      field: "RESERVATION_ID",
     },
     roomId: {
       type: DataTypes.NUMBER,
@@ -47,8 +46,8 @@ RezervationGlobal.init(
   },
   {
     sequelize: SequelizeService.getGlobalInstance(),
-    modelName: "RezervationGlobal",
-    tableName: "REZERVATIONS_GLOBAL",
+    modelName: "ReservationGlobal",
+    tableName: "RESERVATIONS_GLOBAL",
     schema: 'MODBD_GLOBAL_USER',
     createdAt: false,
     updatedAt: false

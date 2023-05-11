@@ -15,7 +15,6 @@ ClientGlobal.init(
     clientId: {
       type: DataTypes.NUMBER,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: true,
       field: "CLIENT_ID",
     },

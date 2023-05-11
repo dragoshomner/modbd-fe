@@ -12,7 +12,6 @@ CityGlobal.init(
     cityId: {
       type: DataTypes.NUMBER,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: true,
       field: "CITY_ID",
     },

@@ -42,7 +42,7 @@ router.get('/:region/:id', async (req, res) => {
 router.post('/:region', async (req, res, next) => {
   const { region } = req.params;
   if (Object.keys(regions).includes(region)) {
-    regions['global'].create(req.body)
+    regions['global'].create(req.body, { returning: false })
       .then((item) => {
         res.status(201)
         res.send({ message: "Resource created successfully"});

@@ -17,7 +17,6 @@ EmployeeGlobal.init(
     employeeId: {
       type: DataTypes.NUMBER,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: true,
       field: "EMPLOYEE_ID",
     },
