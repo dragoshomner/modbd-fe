@@ -36,7 +36,7 @@ export const RoomsTable = ({ rows }) => {
               <TableCell component="th" scope="row">
                 {row.roomId}
               </TableCell>
-              <TableCell>{row.number}</TableCell>
+              <TableCell>{row.roomNumber}</TableCell>
               <TableCell>{row.floor}</TableCell>
               <TableCell>{row.description}</TableCell>
               <TableCell>{row.type}</TableCell>
