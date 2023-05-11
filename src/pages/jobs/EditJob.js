@@ -15,23 +15,24 @@ export const EditJob = () => {
   const { region } = useContext(RegionContext);
 
   useEffect(() => {
-    const roomResponse = fetchJobById(region, params.id);
-    const myDataRaw = isSuccessful(roomResponse) ? 
-      roomResponse.data : 
-      rows.find(row => row.id === Number(params.id));
-    // eslint-disable-next-line no-unused-vars
-    const { id, ...myData } = myDataRaw;
-    setData(myData);
+    fetchJobById(region, params.id).then(roomResponse => {
+      const myDataRaw = isSuccessful(roomResponse) ? 
+        roomResponse.data : 
+        rows.find(row => row.id === Number(params.id));
+      // eslint-disable-next-line no-unused-vars
+      const { jobId, ...myData } = myDataRaw;
+      setData(myData);
+    });
   }, []);
     
   const onSubmit = async (data) => {
     console.log('Edit data', data);
     const response = await updateJob(region, params.id, data);
     if (isSuccessful(response)) {
-      setAlert({ severity: 'success', message: response.message });
+      setAlert({ severity: 'success', message: response.data.message });
     }
     else {
-      setAlert({ severity: 'error', message: response.message });
+      setAlert({ severity: 'error', message: response.data.message });
     }
   };
     

@@ -21,11 +21,11 @@ const CityForm = ({data, onSubmit}) => {
         hasError={Boolean(errors.name)}
         register={register('name', {required: true})} />
       <CustomInput 
-        id="country_id" 
+        id="countryId" 
         label="Country Id" 
         type="number"
-        hasError={Boolean(errors.country_id)}
-        register={register('country_id', {required: true})} />
+        hasError={Boolean(errors.countryId)}
+        register={register('countryId', {required: true})} />
       <Button type="submit" variant="contained" color="primary">
         Submit
       </Button>

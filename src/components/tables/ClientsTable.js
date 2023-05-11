@@ -32,15 +32,15 @@ export const ClientsTable = ({ rows }) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.id}
+                {row.clientId}
               </TableCell>
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.email}</TableCell>
-              <TableCell>{row.phone_number}</TableCell>
-              <TableCell>{row.membership_points}</TableCell>
-              <TableCell><Checkbox disabled checked={row.premium_guest} /></TableCell>
+              <TableCell>{row.phoneNumber}</TableCell>
+              <TableCell>{row.membershipPoints}</TableCell>
+              <TableCell><Checkbox disabled checked={row.premiumGuest} /></TableCell>
               <TableCell>
-                <Button variant="contained" component={Link} to={`/clients/${row.id}`}>
+                <Button variant="contained" component={Link} to={`/clients/${row.clientId}`}>
                   Edit
                 </Button>
               </TableCell>

@@ -28,12 +28,12 @@ export const CountriesTable = ({ rows }) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.id}
+                {row.countryId}
               </TableCell>
               <TableCell>{row.name}</TableCell>
-              <TableCell>{row.continent_id}</TableCell>
+              <TableCell>{row.continentId}</TableCell>
               <TableCell>
-                <Button variant="contained" component={Link} to={`/countries/${row.id}`}>
+                <Button variant="contained" component={Link} to={`/countries/${row.countryId}`}>
                   Edit
                 </Button>
               </TableCell>

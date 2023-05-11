@@ -11,10 +11,11 @@ export const ReservationsList = () => {
   const { region } = useContext(RegionContext);
 
   useEffect(() => {
-    const response = fetchAllReservations(region);
-    // TODO: mockedRows must me replaced with []
-    const rows = isSuccessful(response) ? response.data : mockedRows;
-    setRows(rows);
+    fetchAllReservations(region).then((response) => {
+      // TODO: mockedRows must me replaced with []
+      const rows = isSuccessful(response) ? response.data : mockedRows;
+      setRows(rows);
+    });
   }, [region]);
 
   return (

@@ -11,10 +11,11 @@ export const CountriesList = () => {
   const { region } = useContext(RegionContext);
 
   useEffect(() => {
-    const response = fetchAllCountries(region);
-    // TODO: mockedRows must me replaced with []
-    const rows = isSuccessful(response) ? response.data : mockedRows;
-    setRows(rows);
+    fetchAllCountries(region).then((response) => {
+      // TODO: mockedRows must me replaced with []
+      const rows = isSuccessful(response) ? response.data : mockedRows;
+      setRows(rows);
+    });
   }, [region]);
 
   return (

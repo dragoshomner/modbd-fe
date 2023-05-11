@@ -11,10 +11,11 @@ export const JobsList = () => {
   const { region } = useContext(RegionContext);
 
   useEffect(() => {
-    const response = fetchAllJobs(region);
-    // TODO: mockedRows must me replaced with []
-    const rows = isSuccessful(response) ? response.data : mockedRows;
-    setRows(rows);
+    fetchAllJobs(region).then((response) => {
+      // TODO: mockedRows must me replaced with []
+      const rows = isSuccessful(response) ? response.data : mockedRows;
+      setRows(rows);
+    })
   }, [region]);
 
   return (

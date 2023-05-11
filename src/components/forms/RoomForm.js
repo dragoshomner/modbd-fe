@@ -27,11 +27,11 @@ const RoomForm = ({data, onSubmit}) => {
   return (
     <Box component="form" onSubmit={handleSubmit(onSubmit)}>
       <CustomInput 
-        id="number" 
+        id="roomNumber" 
         label="Number"
         type="number"
-        hasError={Boolean(errors.number)}
-        register={register('number', {required: true})} />
+        hasError={Boolean(errors.roomNumber)}
+        register={register('roomNumber', {required: true})} />
       <CustomInput 
         id="floor" 
         label="Floor" 
@@ -55,11 +55,11 @@ const RoomForm = ({data, onSubmit}) => {
         hasError={Boolean(errors.price)}
         register={register('price', {required: true})} />
       <CustomInput 
-        id="hotel_id"
+        id="hotelId"
         label="Hotel Id" 
         type="number"
-        hasError={Boolean(errors.hotel_id)}
-        register={register('hotel_id', {required: true})} />
+        hasError={Boolean(errors.hotelId)}
+        register={register('hotelId', {required: true})} />
 
       <Controller
         name="smoking"

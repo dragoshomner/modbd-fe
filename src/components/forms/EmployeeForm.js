@@ -26,34 +26,34 @@ const EmployeeForm = ({data, onSubmit}) => {
         hasError={Boolean(errors.address)}
         register={register('address', {required: true})} />
       <CustomInput 
-        id="start_date" 
+        id="startDate" 
         label="Start Date" 
         type="date"
-        hasError={Boolean(errors.start_date)}
-        register={register('start_date', {required: true})} />
+        hasError={Boolean(errors.startDate)}
+        register={register('startDate', {required: true})} />
       <CustomInput 
-        id="birth_date" 
+        id="birthDate" 
         label="Birth Date" 
         type="date"
-        hasError={Boolean(errors.birth_date)}
-        register={register('birth_date', {required: true})} />
+        hasError={Boolean(errors.birthDate)}
+        register={register('birthDate', {required: true})} />
       <CustomInput 
         id="nationality" 
         label="Nationality"
         hasError={Boolean(errors.nationality)}
         register={register('nationality', {required: true})} />
       <CustomInput 
-        id="hotel_id" 
+        id="hotelId" 
         label="Hotel ID" 
         type="number"
-        hasError={Boolean(errors.hotel_id)}
-        register={register('hotel_id', {required: true})} />
+        hasError={Boolean(errors.hotelId)}
+        register={register('hotelId', {required: true})} />
       <CustomInput 
-        id="job_id" 
+        id="jobId" 
         label="Job ID" 
         type="number"
-        hasError={Boolean(errors.job_id )}
-        register={register('job_id', {required: true})} />
+        hasError={Boolean(errors.jobId )}
+        register={register('jobId', {required: true})} />
       <Button type="submit" variant="contained" color="primary">
         Submit
       </Button>

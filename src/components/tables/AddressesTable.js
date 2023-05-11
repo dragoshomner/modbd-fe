@@ -31,15 +31,15 @@ export const AddressesTable = ({ rows }) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.id}
+                {row.addressId}
               </TableCell>
               <TableCell>{row.street}</TableCell>
-              <TableCell>{row.number}</TableCell>
-              <TableCell>{row.postal_code}</TableCell>
+              <TableCell>{row.addressNumber}</TableCell>
+              <TableCell>{row.postalCode}</TableCell>
               <TableCell>{row.notes}</TableCell>
-              <TableCell>{row.city_id}</TableCell>
+              <TableCell>{row.cityId}</TableCell>
               <TableCell>
-                <Button variant="contained" component={Link} to={`/addresses/${row.id}`}>
+                <Button variant="contained" component={Link} to={`/addresses/${row.addressId}`}>
                   Edit
                 </Button>
               </TableCell>

@@ -15,7 +15,7 @@ const ClientForm = ({data, onSubmit}) => {
     control,
   } = useForm({
     defaultValues: {
-      premium_guest: false,
+      premiumGuest: false,
       ...data
     }
   });
@@ -37,18 +37,18 @@ const ClientForm = ({data, onSubmit}) => {
         hasError={Boolean(errors.email)}
         register={register('email', {required: true})} />
       <CustomInput 
-        id="phone_number"
+        id="phoneNumber"
         label="Phone Number"
-        hasError={Boolean(errors.phone_number)}
-        register={register('phone_number', {required: true})} />
+        hasError={Boolean(errors.phoneNumber)}
+        register={register('phoneNumber', {required: true})} />
       <CustomInput 
-        id="membership_points"
+        id="membershipPoints"
         label="Membership Points" 
-        hasError={Boolean(errors.membership_points)}
-        register={register('membership_points', {required: true})} />
+        hasError={Boolean(errors.membershipPoints)}
+        register={register('membershipPoints', {required: true})} />
 
       <Controller
-        name="premium_guest"
+        name="premiumGuest"
         control={control}
         render={({ field }) => (
           <Box style={{ marginBottom: 10 }}>

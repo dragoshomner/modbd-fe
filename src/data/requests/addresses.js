@@ -1,9 +1,9 @@
 import { MAIN_API_URL } from './constants';
 import { successResponse, errorResponse } from './response';
 
-export const fetchAllAddresess = async (region) => {
+export const fetchAllAddresses = async (region) => {
   try {
-    const response = await fetch(`${MAIN_API_URL}/api/addresess/${region}`);
+    const response = await fetch(`${MAIN_API_URL}/api/addresses/${region}`);
     if (response.ok) {
       const data = await response.json();
       return successResponse(data);
@@ -16,7 +16,7 @@ export const fetchAllAddresess = async (region) => {
 
 export const fetchAddressById = async (region, id) => {
   try {
-    const response = await fetch(`${MAIN_API_URL}/api/addresess/${region}/${id}`);
+    const response = await fetch(`${MAIN_API_URL}/api/addresses/${region}/${id}`);
     if (response.ok) {
       const data = await response.json();
       return successResponse(data);
@@ -27,35 +27,35 @@ export const fetchAddressById = async (region, id) => {
   }
 };
 
-export const createAddress = async (region, data) => {
+export const createAddress = async (region, body) => {
   try {
-    const response = await fetch(`${MAIN_API_URL}/api/addresess/${region}`, {
+    const response = await fetch(`${MAIN_API_URL}/api/addresses/${region}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     });
+    const data = await response.json();
     if (response.ok) {
-      const data = await response.json();
       return successResponse(data);
     }
-    return errorResponse(response.message);
+    return errorResponse(data);
   } catch (error) {
     return errorResponse(error.message);
   }
 };
 
-export const updateAddress = async (region, id, data) => {
+export const updateAddress = async (region, id, body) => {
   try {
-    const response = await fetch(`${MAIN_API_URL}/api/addresess/${region}/${id}`, {
+    const response = await fetch(`${MAIN_API_URL}/api/addresses/${region}/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     });
+    const data = await response.json();
     if (response.ok) {
-      const data = await response.json();
       return successResponse(data);
     }
-    return errorResponse(response.message);
+    return errorResponse(data);
   } catch (error) {
     return errorResponse(error.message);
   }

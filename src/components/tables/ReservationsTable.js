@@ -31,15 +31,15 @@ export const ReservationsTable = ({ rows }) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.id}
+                {row.reservationId}
               </TableCell>
-              <TableCell>{row.check_in_date}</TableCell>
-              <TableCell>{row.check_out_date}</TableCell>
-              <TableCell>{row.created_at}</TableCell>
-              <TableCell>{row.room_id}</TableCell>
-              <TableCell>{row.client_id}</TableCell>
+              <TableCell>{row.checkInDate}</TableCell>
+              <TableCell>{row.checkOutDate}</TableCell>
+              <TableCell>{row.createdAt}</TableCell>
+              <TableCell>{row.roomId}</TableCell>
+              <TableCell>{row.clientId}</TableCell>
               <TableCell>
-                <Button variant="contained" component={Link} to={`/reservations/${row.id}`}>
+                <Button variant="contained" component={Link} to={`/reservations/${row.reservationId}`}>
                   Edit
                 </Button>
               </TableCell>

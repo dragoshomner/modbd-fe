@@ -21,10 +21,10 @@ const JobForm = ({data, onSubmit}) => {
         hasError={Boolean(errors.name)}
         register={register('name', {required: true})} />
       <CustomInput 
-        id="departement_name" 
+        id="departementName" 
         label="Department Name" 
-        hasError={Boolean(errors.department_name)}
-        register={register('department_name', {required: true})} />
+        hasError={Boolean(errors.departmentName)}
+        register={register('departmentName', {required: true})} />
       <CustomInput 
         id="salary" 
         label="Salary" 
